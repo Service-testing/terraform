@@ -1,4 +1,3 @@
-# SELECT * FROM ch_org_service.accounts where
 resource "aws_vpc" "msk_vpc" {
   cidr_block = var.vpc_cidr
   tags = merge(
