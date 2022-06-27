@@ -12,6 +12,7 @@ locals {
 
 # Lambda@Edge functions don't support environment variables, so let's inline the relevant parts of the config to the JS file.
 # (see: "error creating CloudFront Distribution: InvalidLambdaFunctionAssociation: The function cannot have environment variables")
+# (see: "error creating CloudFront Distribution: InvalidLambdaFunctionAssociation: The function cannot have environment variables")
 data "template_file" "lambda" {
   template = "${file("${path.module}/lambda.tpl.js")}"
 
